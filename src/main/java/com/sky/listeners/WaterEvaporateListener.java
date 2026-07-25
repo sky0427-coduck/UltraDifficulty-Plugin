@@ -1,6 +1,6 @@
-package listeners;
+package com.sky.listeners;
 
-import managers.GameManager;
+import com.sky.managers.GameManager;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -11,6 +11,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBucketEmptyEvent;
 import org.bukkit.inventory.ItemStack;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -39,7 +41,10 @@ public class WaterEvaporateListener implements Listener {
 
 
                 event.setCancelled(true);
-                player.sendMessage("물이 증발됐어요! 지구온난화 탓인가봐요..");
+                player.sendMessage(
+                        Component.text("물이 증발됐어요! ", NamedTextColor.AQUA)
+                                .append(Component.text("지구온난화 탓인가봐요..", NamedTextColor.GRAY))
+                );
 
                 // 물양동이를 빈 양동이로 교체 (서바이벌 모드 전용)
                 if (player.getGameMode() == org.bukkit.GameMode.SURVIVAL) {

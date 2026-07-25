@@ -1,8 +1,8 @@
-package commands;
+package com.sky.commands;
 
 import io.papermc.paper.command.brigadier.BasicCommand;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
-import managers.GameManager;
+import com.sky.managers.GameManager;
 import org.bukkit.command.CommandSender;
 import org.jspecify.annotations.NullMarked;
 

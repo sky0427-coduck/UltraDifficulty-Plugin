@@ -1,6 +1,6 @@
-package listeners.nether;
+package com.sky.listeners.nether;
 
-import managers.GameManager;
+import com.sky.managers.GameManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.World;
