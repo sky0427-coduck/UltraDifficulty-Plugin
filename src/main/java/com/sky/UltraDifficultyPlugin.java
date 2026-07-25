@@ -2,6 +2,7 @@ package com.sky;
 
 import commands.ImpossibleCommand;
 import listeners.RespawnListener;
+import listeners.WaterEvaporateListener;
 import listeners.nether.NetherPortalListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -31,9 +32,10 @@ public final class UltraDifficultyPlugin extends JavaPlugin {
     }
 
     private void registerListeners() {
-        var pm = getServer().getPluginManager();
-        pm.registerEvents(new NetherPortalListener(), this);
-        pm.registerEvents(new RespawnListener(), this);
+        var sp = getServer().getPluginManager(); //제미나이 꼼수 지렸다
+        sp.registerEvents(new NetherPortalListener(), this);
+        sp.registerEvents(new RespawnListener(), this);
+        sp.registerEvents(new WaterEvaporateListener(), this);
     }
 
     private void startSchedulers() {
