@@ -39,6 +39,7 @@ public class WaterEvaporateListener implements Listener {
 
 
                 event.setCancelled(true);
+                player.sendMessage("물이 증발됐어요! 지구온난화 탓인가봐요..");
 
                 // 물양동이를 빈 양동이로 교체 (서바이벌 모드 전용)
                 if (player.getGameMode() == org.bukkit.GameMode.SURVIVAL) {
