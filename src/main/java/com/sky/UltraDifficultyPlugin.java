@@ -3,9 +3,11 @@ package com.sky;
 import com.sky.commands.ImpossibleCommand;
 import com.sky.listeners.RespawnListener;
 import com.sky.listeners.WaterEvaporateListener;
+import com.sky.listeners.mob.CreeperShieldBreakListener;
 import com.sky.listeners.nether.NetherPortalListener;
+import com.sky.listeners.nether.mob.PiglinBarterListener;
 import org.bukkit.plugin.java.JavaPlugin;
-import com.sky.task.AngryPiglin;
+import com.sky.task.AngryPiglinScheduler;
 
 public final class UltraDifficultyPlugin extends JavaPlugin {
 
@@ -37,10 +39,12 @@ public final class UltraDifficultyPlugin extends JavaPlugin {
         sp.registerEvents(new NetherPortalListener(), this);
         sp.registerEvents(new RespawnListener(), this);
         sp.registerEvents(new WaterEvaporateListener(), this);
+        sp.registerEvents(new CreeperShieldBreakListener(), this);
+        sp.registerEvents(new PiglinBarterListener(), this);
     }
 
     private void startSchedulers() {
-        new AngryPiglin().runTaskTimer(this, 0L, 2L);
+        new AngryPiglinScheduler().runTaskTimer(this, 0L, 2L); // 피글린 타깃 갱신 스케줄러
     }
 
 

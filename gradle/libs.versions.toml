@@ -3,12 +3,12 @@ paper-api = "26.1.2.build.+"
 minecraft = "26.1.2"
 
 paperweight-userdev = "2.0.0-beta.21"
-run-com.sky.task = "3.0.2"
+run-paper = "3.0.2"
 resource-factory = "1.3.1"
 
 [libraries]
 
 [plugins]
 paperweight-userdev = { id = "io.papermc.paperweight.userdev", version.ref = "paperweight-userdev" }
-run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-com.sky.task" }
+run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-paper" }
 resource-factory-bukkit = { id = "xyz.jpenilla.resource-factory-bukkit-convention", version.ref = "resource-factory" }
