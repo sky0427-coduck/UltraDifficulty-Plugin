@@ -37,7 +37,7 @@ public class MobKillListener implements Listener {
             int z = loc.getBlockZ();
 
 
-            if (ThreadLocalRandom.current().nextDouble() < 0.1) {
+            if (ThreadLocalRandom.current().nextDouble() < 0.3) {
 
 
                 Entity clone = world.spawnEntity(loc, entity.getType());
