@@ -4,8 +4,9 @@ import com.sky.commands.ImpossibleCommand;
 import com.sky.listeners.RespawnListener;
 import com.sky.listeners.WaterEvaporateListener;
 import com.sky.listeners.mob.CreeperShieldBreakListener;
+import com.sky.listeners.mob.MobKillListener;
 import com.sky.listeners.nether.NetherPortalListener;
-import com.sky.listeners.nether.mob.PiglinBarterListener;
+import com.sky.listeners.mob.PiglinBarterListener;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sky.task.AngryPiglinScheduler;
 
@@ -41,6 +42,7 @@ public final class UltraDifficultyPlugin extends JavaPlugin {
         sp.registerEvents(new WaterEvaporateListener(), this);
         sp.registerEvents(new CreeperShieldBreakListener(), this);
         sp.registerEvents(new PiglinBarterListener(), this);
+        sp.registerEvents(new MobKillListener(), this);
     }
 
     private void startSchedulers() {

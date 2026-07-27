@@ -1,4 +1,4 @@
-package com.sky.listeners.nether.mob;
+package com.sky.listeners.mob;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
