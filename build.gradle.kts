@@ -16,8 +16,8 @@ dependencies {
 }
 
 bukkitPluginYaml {
-    main = "com.sky.UltraDifficultyPlugin"
-    paperPluginLoader = "com.sky.UltraDifficultyPluginLoader"
+    main = "com.sky0427_coduck.UltraDifficultyPlugin"
+    paperPluginLoader = "com.sky0427_coduck.UltraDifficultyPluginLoader"
     apiVersion = "26.1.2"
 
     load = BukkitPluginYaml.PluginLoadOrder.STARTUP

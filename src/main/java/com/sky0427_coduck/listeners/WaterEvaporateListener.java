@@ -1,6 +1,6 @@
-package com.sky.listeners;
+package com.sky0427_coduck.listeners;
 
-import com.sky.managers.GameManager;
+import com.sky0427_coduck.managers.GameManager;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;

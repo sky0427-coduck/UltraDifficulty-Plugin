@@ -1,4 +1,4 @@
-package com.sky.managers;
+package com.sky0427_coduck.managers;
 
 public final class GameManager {
 

@@ -36,8 +36,8 @@
 #         * functions;
 #         * expansions «$var», «${var}», «${var:-default}», «${var+SET}»,
 #           «${var#prefix}», «${var%suffix}», and «$( cmd )»;
-#         * compound com.sky.commands having a testable exit status, especially «case»;
-#         * various built-in com.sky.commands including «command», «set», and «ulimit».
+#         * compound com.sky0427_coduck.commands having a testable exit status, especially «case»;
+#         * various built-in com.sky0427_coduck.commands including «command», «set», and «ulimit».
 #
 #   Important for patching:
 #

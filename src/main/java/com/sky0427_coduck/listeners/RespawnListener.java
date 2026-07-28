@@ -1,7 +1,7 @@
-package com.sky.listeners;
+package com.sky0427_coduck.listeners;
 
 import com.destroystokyo.paper.event.player.PlayerSetSpawnEvent;
-import com.sky.managers.GameManager;
+import com.sky0427_coduck.managers.GameManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Material;

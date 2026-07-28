@@ -1,4 +1,4 @@
-package com.sky.listeners.mob;
+package com.sky0427_coduck.listeners.mob;
 
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -7,7 +7,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 
-import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class MobKillListener implements Listener {

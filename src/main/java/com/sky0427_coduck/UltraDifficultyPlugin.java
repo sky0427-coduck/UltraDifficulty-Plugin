@@ -1,14 +1,13 @@
-package com.sky;
+package com.sky0427_coduck;
 
-import com.sky.commands.ImpossibleCommand;
-import com.sky.listeners.RespawnListener;
-import com.sky.listeners.WaterEvaporateListener;
-import com.sky.listeners.mob.CreeperShieldBreakListener;
-import com.sky.listeners.mob.MobKillListener;
-import com.sky.listeners.nether.NetherPortalListener;
-import com.sky.listeners.mob.PiglinBarterListener;
+import com.sky0427_coduck.commands.ImpossibleCommand;
+import com.sky0427_coduck.listeners.RespawnListener;
+import com.sky0427_coduck.listeners.WaterEvaporateListener;
+import com.sky0427_coduck.listeners.mob.*;
+import com.sky0427_coduck.listeners.nether.NetherPortalListener;
+import com.sky0427_coduck.task.NetherFireScheduler;
 import org.bukkit.plugin.java.JavaPlugin;
-import com.sky.task.AngryPiglinScheduler;
+import com.sky0427_coduck.task.AngryPiglinScheduler;
 
 public final class UltraDifficultyPlugin extends JavaPlugin {
 
@@ -36,17 +35,20 @@ public final class UltraDifficultyPlugin extends JavaPlugin {
     }
 
     private void registerListeners() {
-        var sp = getServer().getPluginManager(); //제미나이 꼼수 지렸다
+        var sp = getServer().getPluginManager(); //제미나이 꼼수 gg
         sp.registerEvents(new NetherPortalListener(), this);
         sp.registerEvents(new RespawnListener(), this);
         sp.registerEvents(new WaterEvaporateListener(), this);
         sp.registerEvents(new CreeperShieldBreakListener(), this);
-        sp.registerEvents(new PiglinBarterListener(), this);
+        sp.registerEvents(new PiglinBarterListener(this), this);
         sp.registerEvents(new MobKillListener(), this);
+        sp.registerEvents(new PlayerDropGoldListener(), this);
+        sp.registerEvents(new PiglinPickupListener(), this);
     }
 
     private void startSchedulers() {
         new AngryPiglinScheduler().runTaskTimer(this, 0L, 2L); // 피글린 타깃 갱신 스케줄러
+        new NetherFireScheduler().runTaskTimer(this, 0L, 5L);
     }
 
 

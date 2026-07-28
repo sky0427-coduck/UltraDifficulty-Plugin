@@ -1,4 +1,4 @@
-package com.sky;
+package com.sky0427_coduck;
 
 import io.papermc.paper.plugin.loader.PluginClasspathBuilder;
 import io.papermc.paper.plugin.loader.PluginLoader;

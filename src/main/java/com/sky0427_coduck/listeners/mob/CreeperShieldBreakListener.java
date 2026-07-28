@@ -1,4 +1,4 @@
-package com.sky.listeners.mob;
+package com.sky0427_coduck.listeners.mob;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

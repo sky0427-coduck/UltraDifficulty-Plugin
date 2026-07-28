@@ -1,13 +1,15 @@
-package com.sky.listeners.nether;
+package com.sky0427_coduck.listeners.nether;
 
-import com.sky.managers.GameManager;
+import com.sky0427_coduck.managers.GameManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.World;
+
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerPortalEvent;
+
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -35,6 +37,7 @@ public class NetherPortalListener implements Listener {
         if (!overworldToNether && !netherToOverworld) {
             return;
         }
+
 
         // 50% 실패
         if (ThreadLocalRandom.current().nextDouble() >= 0.5) {
