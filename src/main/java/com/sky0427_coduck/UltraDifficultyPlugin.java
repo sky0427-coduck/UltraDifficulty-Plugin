@@ -9,6 +9,9 @@ import com.sky0427_coduck.task.NetherFireScheduler;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sky0427_coduck.task.AngryPiglinScheduler;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public final class UltraDifficultyPlugin extends JavaPlugin {
 
     @Override
@@ -50,6 +53,8 @@ public final class UltraDifficultyPlugin extends JavaPlugin {
         new AngryPiglinScheduler().runTaskTimer(this, 0L, 2L); // 피글린 타깃 갱신 스케줄러
         new NetherFireScheduler().runTaskTimer(this, 0L, 5L);
     }
+
+    public static final Set<String> shownMessages = new HashSet<>(); // 서버메시지 출력 기준
 
 
 }

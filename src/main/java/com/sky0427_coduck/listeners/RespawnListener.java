@@ -1,6 +1,7 @@
 package com.sky0427_coduck.listeners;
 
 import com.destroystokyo.paper.event.player.PlayerSetSpawnEvent;
+import com.sky0427_coduck.UltraDifficultyPlugin;
 import com.sky0427_coduck.managers.GameManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -41,12 +42,15 @@ public class RespawnListener implements Listener {
                 // 우클릭 차단
                 event.setCancelled(true);
 
-                player.sendMessage(
+                if (UltraDifficultyPlugin.shownMessages.add("RESPAWN")){
+                    player.sendMessage(
                         Component.text(
                                 player.getName() + "님이 리스폰 설정에 실패했습니다! (30% 확률)",
                                 NamedTextColor.RED
                         )
                 );
+                }
+
 
                 // 고정 피해 계산 및 적용
                 double currentHealth = player.getHealth();

@@ -1,5 +1,7 @@
 package com.sky0427_coduck.listeners.mob;
 
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Creeper;
@@ -28,6 +30,12 @@ public class CreeperShieldBreakListener implements Listener {
 
             if (ThreadLocalRandom.current().nextDouble() < 0.1) {
                 breakShield(player);
+                player.sendActionBar(
+                        Component.text(
+                                player.getName() + "크리퍼가 방패를 깨버렸습니다! 더 튼튼한 방패로 맞추시죠? (없음)",
+                                NamedTextColor.WHITE
+                        )
+                );
             }
         }
     }

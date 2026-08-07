@@ -1,5 +1,6 @@
 package com.sky0427_coduck.listeners.mob;
 
+import com.sky0427_coduck.UltraDifficultyPlugin;
 import com.sky0427_coduck.helper.PiglinTradeTracker;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -46,10 +47,13 @@ public class PiglinBarterListener implements Listener {
         // 30% 확률로 1초 뒤 현재 플레이어 위치에 TNT 생성
         if (ThreadLocalRandom.current().nextDouble() < 0.3) {
 
-            player.sendMessage(Component.text(
-                    "뭔가 불길한 예감이 듭니다... 이번엔 30%입니다!",
-                    NamedTextColor.DARK_RED
-            ));
+            if (UltraDifficultyPlugin.shownMessages.add("PIGLIN_BARTER")) {
+                player.sendMessage(Component.text(
+                        "뭔가 불길한 예감이 듭니다... 이번엔 30%입니다!",
+                        NamedTextColor.DARK_RED
+                ));
+            }
+
 
             Bukkit.getScheduler().runTaskLater(plugin, () -> {
 
@@ -67,7 +71,7 @@ public class PiglinBarterListener implements Listener {
                 TNTPrimed tnt = loc.getWorld().spawn(loc, TNTPrimed.class);
                 tnt.setFuseTicks(0); // 생성 즉시 폭발
 
-            }, 20L); // 20틱 = 1초
+            }, 20L); //1초
         }
     }
 }
